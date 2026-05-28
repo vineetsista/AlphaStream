@@ -1,0 +1,21 @@
+flask==3.0.3
+flask-sqlalchemy==3.1.1
+flask-migrate==4.0.7
+flask-cors==4.0.1
+flask-limiter==3.7.0
+psycopg2-binary>=2.9.9
+python-dotenv==1.0.1
+werkzeug==3.0.3
+gunicorn==22.0.0
+sendgrid==6.11.0
+apscheduler==3.10.4
+aiohttp>=3.10.0
+nba_api>=1.5.0
+pandas>=2.2.3
+numpy>=2.0.0
+scipy>=1.14.0
+cryptography==42.0.8
+requests==2.32.3
+pytz==2024.1
+mlb-statsapi>=1.9.0
+# nfl_data_py requires numpy<2.0 — incompatible with Python 3.13; NFL framework present but stats disabled
