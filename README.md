@@ -7,6 +7,7 @@
 Z-score anomaly detection · fractional-Kelly sizing · live Discord alerts · multi-sport coverage.
 
 <p>
+  <a href="https://github.com/vineetsista/AlphaStream/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/vineetsista/AlphaStream/actions/workflows/ci.yml/badge.svg"></a>
   <img alt="Python" src="https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white">
   <img alt="Flask" src="https://img.shields.io/badge/Flask-3.0-000000?logo=flask&logoColor=white">
   <img alt="React" src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black">
@@ -15,6 +16,11 @@ Z-score anomaly detection · fractional-Kelly sizing · live Discord alerts · m
   <img alt="License" src="https://img.shields.io/badge/license-MIT-10D97B">
   <img alt="Status" src="https://img.shields.io/badge/status-personal%20project-A855F7">
 </p>
+
+<!--
+  Drop a hero screenshot at docs/screenshots/landing-hero.png and uncomment:
+  <img src="docs/screenshots/landing-hero.png" alt="Alpha-Stream landing" width="900">
+-->
 
 </div>
 
@@ -44,6 +50,23 @@ It is a **personal project**. There is no paywall, no subscription, no SaaS. You
 | 🔐 **AES-256 at rest** | Your Kalshi API key is encrypted with a Fernet key derived from your Flask secret. Never logged, never transmitted plain. |
 | 📈 **Calibration tracking** | Reliability diagram — measures whether the model's 70% bets really win 70% of the time. |
 | 🧪 **Demo slate** | Seed ~44 realistic signals with one click for screenshots/demos without burning API credits. |
+
+---
+
+## Screenshots
+
+> Drop PNGs into `docs/screenshots/` and uncomment the table rows below. See `docs/screenshots/README.md` for the suggested capture list.
+
+<!--
+| | |
+|:---:|:---:|
+| ![Landing](docs/screenshots/landing-hero.png) | ![Dashboard](docs/screenshots/dashboard.png) |
+| **Landing — gradient hero + radar scan** | **Live signal feed with SSE auto-updates** |
+| ![Signal drawer](docs/screenshots/signal-drawer.png) | ![Backtest](docs/screenshots/backtest.png) |
+| **Per-signal drawer — game logs + bell curve** | **30-day backtest with P&L curve** |
+| ![Portfolio](docs/screenshots/portfolio.png) | ![Discord alert](docs/screenshots/discord-alert.png) |
+| **Exposure breakdown by team / stat / sport** | **Live Discord webhook embed** |
+-->
 
 ---
 

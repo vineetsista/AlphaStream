@@ -1,22 +1,32 @@
-FROM python:3.11-slim
+# syntax=docker/dockerfile:1.6
 
+# ── Stage 1 — build the React frontend ───────────────────────────────────────
+FROM node:20-alpine AS frontend-build
+WORKDIR /app/frontend
+
+COPY frontend/package.json frontend/package-lock.json ./
+RUN npm ci --no-audit --no-fund
+
+COPY frontend/ ./
+# Vite is configured to emit straight into ../backend/static
+RUN npm run build
+
+
+# ── Stage 2 — Python runtime ─────────────────────────────────────────────────
+FROM python:3.11-slim AS runtime
 WORKDIR /app
 
-# Install system deps
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Python deps
 COPY backend/requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy backend
 COPY backend/ ./
 
-# Copy built frontend (run `npm run build` first)
-# The Vite build outputs to backend/static via vite.config.js
-# so it's already included in COPY backend/
+# Pull the built frontend bundle from stage 1
+COPY --from=frontend-build /app/backend/static ./static
 
 EXPOSE 8000
 

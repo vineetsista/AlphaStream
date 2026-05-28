@@ -944,7 +944,7 @@ export default function Landing() {
             </Link>
           </motion.div>
           <motion.p variants={fadeUp} style={{ marginTop: 18, fontSize: 12, color: 'rgba(180,255,210,0.2)' }}>
-            Personal project · Self-hosted · CFTC-regulated via Kalshi · Not financial advice
+            Personal project · Self-hosted · MIT-licensed · Not financial advice
           </motion.p>
         </motion.div>
       </section>
